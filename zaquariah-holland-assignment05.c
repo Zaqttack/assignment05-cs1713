@@ -1,5 +1,21 @@
+/*
+	zaquariah-holland-assignment05.c
+	Assignment 05
+	Zaquariah Holland
+	
+	This .c main file to calculate Pascal's Triangle.
+*/
 #include <stdio.h>
 
+/*
+	Function: printTriangle
+	-------------------
+	Takes a users int input and calculates Pascal's Triangle while omitting the second row. 
+	
+	N: a user input for amount of rows.
+	
+	Returns: VOID
+*/
 void printTriangle(int N) {
     int i, j, k, coeff = 1;
     
@@ -25,6 +41,13 @@ void printTriangle(int N) {
     }
 }
 
+/*
+	Function: main
+	-------------------
+	Main driver for the program asking for user input and calling printTriangle function.
+	
+	Returns: 0
+*/
 int main(int argv, char* argc[]) {
     int N = 0;
     
