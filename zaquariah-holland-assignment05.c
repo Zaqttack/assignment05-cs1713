@@ -3,7 +3,7 @@
 	Assignment 05
 	Zaquariah Holland
 	
-	This .c main file to calculate Pascal's Triangle.
+	This .c main file to calculates Pascal's Triangle.
 */
 #include <stdio.h>
 
@@ -20,24 +20,19 @@ void printTriangle(int N) {
     int i, j, k, coeff = 1;
     
     for (i = 0; i <= N; i++) { 
-        if (i == 1) {
-            coeff = 1;
-        }
-        else { 
-            for (j = 1; j <= N - i; j++) {
-                printf(".");
-            }
-            for (k = 0; k <= i; k++) {
-                if (i == 0 || k == 0) {
-                    coeff = 1;
-                }
-                else {
-                    coeff = coeff * (i - k + 1) / k;
-                }
-                printf("%d ", coeff);
-            }
-            printf("\n");
-        }
+		for (j = 1; j <= N - i; j++) {
+			printf(" ");
+		}
+		for (k = 0; k <= i; k++) {
+			if (i == 0 || k == 0) {
+				coeff = 1;
+			}
+			else {
+				coeff = coeff * (i - k + 1) / k;
+			}
+			printf("%d ", coeff);
+		}
+		printf("\n");
     }
 }
 
